@@ -1,4 +1,4 @@
-package day02_scanner;
+package day02_scanner_dataCasting_wrapperClasses;
 
 public class C08_DataCasting {
     public static void main(String[] args) {
