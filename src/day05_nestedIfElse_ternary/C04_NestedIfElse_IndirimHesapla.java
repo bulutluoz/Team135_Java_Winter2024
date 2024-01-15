@@ -23,10 +23,36 @@ public class C04_NestedIfElse_IndirimHesapla {
         System.out.println("Urunun indirimsiz fiyatini giriniz...");
         double indirimsizFiyat = scanner.nextDouble();
 
-        System.out.println("Musteri kariniz var mi ? E : Evet, H : Hayir");
+        System.out.println("Musteri kartiniz var mi ? E : Evet, H : Hayir");
         char kartVarMi = scanner.next().toUpperCase().charAt(0);
 
         double indirimsizToplamFiyat = urunAdedi * indirimsizFiyat;
+
+        // ana degisken kart olsun
+
+        if (kartVarMi == 'E'){ // karti olanlar
+
+            if (urunAdedi>1000 || urunAdedi<0){
+                System.out.println("Urun adedi gecersiz");
+            }else if (urunAdedi>10){
+                System.out.println("%20 indirimli toplam fiyat : " + indirimsizToplamFiyat*80/100);
+            }else{
+                System.out.println("%15 indirimli toplam fiyat : " + indirimsizToplamFiyat*85/100);
+            }
+
+        } else if (kartVarMi == 'H') { // karti olmayanlar
+
+            if (urunAdedi>1000 || urunAdedi<0){
+                System.out.println("Urun adedi gecersiz");
+            }else if (urunAdedi>10){
+                System.out.println("%15 indirimli toplam fiyat : " + indirimsizToplamFiyat*85/100);
+            }else{
+                System.out.println("%10 indirimli toplam fiyat : " + indirimsizToplamFiyat*90/100);
+            }
+
+        }else {
+            System.out.println("Kart bilgisi icin E veya H girmelisiniz");
+        }
 
     }
 }
