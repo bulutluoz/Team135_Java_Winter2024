@@ -27,5 +27,31 @@ public class C08_StringManipulationsSoru {
         //      ---- sifre basarili demek icin ayrica flag veya sayac kullanmaliyiz
 
         // bagimsiz if cumleleri ile yapalim
+        // en sonda basarili olarak kaydedildi deemek icin flag kullanalim
+
+        int flag = 0;
+        //         - mail @ icermiyorsa "gecersiz mail"
+        if (!mail.contains("@")){
+            System.out.println("gecersiz mail, sifre @ icermiyor");
+            flag++;
+        }
+
+        //         - mail @gmail.com icermiyorsa, "mail gmail olmali"
+
+        if (!mail.contains("@gmail.com")){
+            System.out.println("mail gmail olmali");
+            flag++;
+        }
+
+        //         - mail @gmail.com ile bitmiyorsa, "mailde yazim hatasi var"
+
+        if (!mail.endsWith("@gmail.com")){
+            System.out.println("mailde yazim hatasi var");
+            flag++;
+        }
+
+        if (flag == 0){
+            System.out.println("Mail basariyla kaydedildi");
+        }
     }
 }
