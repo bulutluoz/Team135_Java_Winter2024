@@ -27,7 +27,6 @@ public class C02_SifreKontrolu {
         int flag = 0; // hata buldukca bu flag degistirilecek
                       // en sonda flag degismis mi kontrol edip, sifre basarili/basarisiz diyecegiz
 
-
         //          - ilk harf kucuk harf olmali
 
         char ilkHarf = sifre.charAt(0);
@@ -36,7 +35,6 @@ public class C02_SifreKontrolu {
             System.out.println("ilk harf kucuk harf olmali");
             flag++;
         }
-
 
         //          - son karakter rakam olmali
 
@@ -48,7 +46,6 @@ public class C02_SifreKontrolu {
             flag++;
         }
 
-
         //          - sifre bosluk icermemeli
 
         if (sifre.contains(" ")){
@@ -56,14 +53,12 @@ public class C02_SifreKontrolu {
             flag++;
         }
 
-
         //          - uzunlugu en az 10 karakter olmali
 
         if (sifre.length() < 10){
             System.out.println("sifrenin uzunlugu en az 10 karakter olmali");
             flag++;
         }
-
 
         // baslangicta flag = 0 'di,
 
