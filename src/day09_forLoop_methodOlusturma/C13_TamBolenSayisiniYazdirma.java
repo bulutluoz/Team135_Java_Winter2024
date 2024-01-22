@@ -22,9 +22,7 @@ public class C13_TamBolenSayisiniYazdirma {
             if (sayi % i == 0){
                 sayac++;
             }
-
         }
-
         System.out.println("Verilen " + sayi +" sayisinin " + sayac + " adet pozitif tam boleni var");
     }
 

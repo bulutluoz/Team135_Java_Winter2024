@@ -14,7 +14,8 @@ public class C15_MethodKullanma {
         // Verilen 2500 sayisinin 15 adet pozitif tam boleni var
 
 
-
+        C14_IsmiIstenenFormattayazdirma.isimDuzenleYazdir("Ali","Can","1234543212345678");
+        // A** C**, **** **** **** 5678
 
 
     }
