@@ -2,7 +2,7 @@ package day09_forLoop_methodOlusturma;
 
 import java.util.Scanner;
 
-public class C06_NestedForLoop {
+public class C07_NestedForLoop {
 
     public static void main(String[] args) {
 
@@ -10,13 +10,16 @@ public class C06_NestedForLoop {
             Kullanicidan satir ve sutun sayisini alip
             asagidaki sekli olusturun
 
-            or : satir 5, sutun 3
-            1 2 3
-            2 4 6
-            3 6 9
-            4 8 12
-            5 10 15
+            or satir 5, sutun 7
+
+            * * * * * * *
+            * * * * * * *
+            * * * * * * *
+            * * * * * * *
+            * * * * * * *
          */
+
+
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Lutfen satir sayisini giriniz...");
@@ -27,11 +30,12 @@ public class C06_NestedForLoop {
 
         for (int i = 1; i <=satir ; i++) { // satirlar
 
-            for (int j = 1; j <=sutun ; j++) { // her satirdaki sutunlari
-                System.out.print(i*j + " ");
+            for (int j = 1; j <=sutun ; j++) { // satirdaki sutunlar
+
+                System.out.print("* ");
+
             }
             System.out.println("");
         }
-
     }
 }
