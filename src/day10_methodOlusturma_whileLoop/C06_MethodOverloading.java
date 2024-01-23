@@ -5,14 +5,14 @@ public class C06_MethodOverloading {
     public static void main(String[] args) {
 
 
-        topla(6); //
-        topla(3,5); //
-        topla(6.3,5); //
-        topla(2.4F,5);//
-        topla(2.3,3.4); //
-        topla('a',5); //
-        topla(2.3f,3.5f); //
-        topla(4,5.2); //
+        topla(6); // Tek integer : 12
+        topla(3,5); // int int : 8
+        topla(6.3,5); // double int : 11.3
+        topla(2.4F,5);// float int : 7.4
+        topla(2.3,3.4); // double double : 5.699999999999999
+        topla('a',5); // int int : 102
+        topla(2.3f,3.5f); // double double : 5.799999952316284
+        topla(4,5.2); // double double : 9.2
 
     }
 
