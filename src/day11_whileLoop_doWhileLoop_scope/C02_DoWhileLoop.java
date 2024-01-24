@@ -2,7 +2,7 @@ package day11_whileLoop_doWhileLoop_scope;
 
 import java.util.Scanner;
 
-public class C01_WhileLoop {
+public class C02_DoWhileLoop {
 
     public static void main(String[] args) {
 
@@ -15,22 +15,11 @@ public class C01_WhileLoop {
 
 
         Scanner scanner = new Scanner(System.in);
-        int girilenSayi = 10;
+        int girilenSayi = 0;
         int pozitifSayilarinToplami = 0;
         int pozitifSayiAdedi = 0 ;
 
-        /*
-
-            While loop kullandigimizda DIKKAT etmemiz gereken EN ONEMLI konu :
-            normalde kullanicidan almayi planladigimiz "girilenSayi" variable'ina
-            basta rastgele bir deger atadik.
-
-            VERDIGIMIZ BU ILK DEGER while loop body'sinin calismasina
-            ENGEL OLMAMALIDIR
-         */
-
-
-        while (girilenSayi != 0){
+        do {
 
             System.out.println("Toplanmak uzere pozitif tamsayi giriniz...");
             girilenSayi = scanner.nextInt();
@@ -41,8 +30,11 @@ public class C01_WhileLoop {
             } else if (girilenSayi < 0) {
                 System.out.println("negatif sayi kullanamazsiniz");
             }
-        }
+
+        }while (girilenSayi != 0);
 
         System.out.println("Girdiginiz " + pozitifSayiAdedi + " adet pozitif sayinin toplami : " + pozitifSayilarinToplami);
+
+
     }
 }
