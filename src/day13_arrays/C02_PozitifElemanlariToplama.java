@@ -14,7 +14,7 @@ public class C02_PozitifElemanlariToplama {
         // verilen int array'deki pozitif tamsayilarin
         // ortalamasini double olarak donduren bir method olusturun
 
-        System.out.println(pozitifElemanlarinOrtalamasiniHesapla(arr)); // 21 / 4 ==> 5.25
+        System.out.println(pozitifElemanlarinOrtalamasiniHesapla(arr)); //
 
     }
 
