@@ -28,5 +28,24 @@ public class C07_ArrayList {
 
         System.out.println(sayilar); // [5, 4, 8, 3]
 
+        // List<Integer> list1 = new List<>(); // 'List' is abstract; cannot be instantiated
+
+        ArrayList<Integer> list2 = new ArrayList<>();
+        list2.add(10);
+        list2.add(20);
+
+        System.out.println(list2); // [10, 20]
+
+        List<Integer> list3 = new ArrayList<Integer>(); // Explicit type argument Integer can be replaced with <>
+
+        sayilar.addAll(list2);
+
+        System.out.println(sayilar); // [5, 4, 8, 3, 10, 20]
+
+        // list2'nin elementlerini sayilarin en basina ekleyin
+
+        sayilar.addAll(0,list2);
+
+        System.out.println(sayilar); // [10, 20, 5, 4, 8, 3, 10, 20]
     }
 }
