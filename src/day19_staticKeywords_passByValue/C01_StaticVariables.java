@@ -47,15 +47,6 @@ public class C01_StaticVariables {
 
 
 
-
-
-
-
-
-
-
-
-
     public static void method1(){
         System.out.println(sayiS);
         //System.out.println(sayiI); // Non-static field 'sayiI' cannot be referenced from a static context
