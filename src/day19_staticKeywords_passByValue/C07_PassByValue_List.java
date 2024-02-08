@@ -9,6 +9,34 @@ public class C07_PassByValue_List {
 
     public static void main(String[] args) {
 
+        /*
+            Java'da tek deger barindiran int, double, String gibi data turlerinde
+            method'a variable yolladigimizda
+            method'da yapilan degisiklik method'da kalir
+            ve main method'daki asil variable'in degeri
+            atama yapilmadikca degismez
+
+            method'da yapilan degisikligin kalici olmasi icin
+            main method'da ATAMA YAPMALIYIZ
+
+            PassByValue coklu eleman barindiran array ve arrayList gibi yapilarda
+            biraz farkli davranir
+
+            (araba ve yolcu ornegi hatirda kalmali)
+
+            method'a yolladigimiz array veya list'e
+            method'da yeni bir array veya yeni bir list atanirsa
+            bu degisiklik method'da kalir ve
+            main method'daki asil array veya list degismez
+            (araba degisti ise , java degisikligi methodda birakir, main method'a dondurmez)
+
+            ama method'da sadece elemanlarda degisiklik yapildiysa
+            elemanlarda yapilan degisiklik
+            main method'daki array veya list'e de islenir.
+            (yolcular degisince java bunu kabul eder)
+
+         */
+
         List<Integer> sayilar = new ArrayList<>(Arrays.asList(1,4,5,8));
 
         System.out.println(sayilar); // [1, 4, 5, 8]
@@ -54,22 +82,12 @@ public class C07_PassByValue_List {
         // random liste olustur methodunda sayilar : [74, 75, 89, 30]
     }
 
-
-
-
-
-
-
     public static void elemanSil(List<Integer> list){
 
         list.remove(2);
         System.out.println("elaman sil methodunda liste : " + list);
         // elaman sil methodunda liste : [1, 4, 8, 10]
     }
-
-
-
-
 
         public static void elemanEkle(List<Integer> sayilar){
 
