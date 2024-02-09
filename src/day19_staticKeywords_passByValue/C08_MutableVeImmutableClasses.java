@@ -24,13 +24,13 @@ public class C08_MutableVeImmutableClasses {
 
         String str = "Java Candir";
 
-        str.toLowerCase();
+        System.out.println(str.toLowerCase()); // java candir
 
-        str.toUpperCase();
+        System.out.println(str.toUpperCase()); // JAVA JANDIR
 
-        str.substring(5);
+        System.out.println(str.substring(5)); // Candir
 
-        str.replace("a","b");
+        System.out.println(str.replace("a", "b")); // Jbvb Cbndir
 
         System.out.println(str); // Java Candir
 
