@@ -26,12 +26,13 @@ public class C01_StringBuilder {
 
         System.out.println(sb.substring(5)); // Guzeldir
         System.out.println(sb.subSequence(0, 4)); // Java
+        System.out.println(sb.lastIndexOf("J")); // 0
+        System.out.println(sb.indexOf("a")); // 1
+
+        System.out.println(sb.toString().toLowerCase()); // java guzeldir
+        System.out.println(sb.toString().toUpperCase()); // JAVA GUZELDIR
+        System.out.println(sb.toString().replace("Guzeldir", "Candir")); // Java Candir
+
         System.out.println(sb); // Java Guzeldir
-
-
-
-
-
-
     }
 }
