@@ -28,8 +28,15 @@ public class C03_AccessModifier {
 
         // default access modifier'a sahip olan class uyeleri
         // icinde bulunduklari package'dan kullanilabilir
+        // package private olarak da isimlendirilir
         System.out.println(obj.sayiDef); // 25
         obj.methodDef(); // Default method calisti
+
+        System.out.println(obj.sayiPro); // 30
+        obj.methodPro(); // Protected method calisti
+
+        System.out.println(obj.sayiPub); // 20
+        obj.methodPub(); // Public method calisti
 
 
     }
