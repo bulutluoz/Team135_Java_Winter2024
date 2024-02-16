@@ -7,6 +7,7 @@ public class C04_GP {
     }
 
     C04_GP(String s){
+        this(4);
         System.out.println("GP String parametreli constructor calisti");
     }
 

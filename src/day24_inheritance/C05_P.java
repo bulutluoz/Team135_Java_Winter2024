@@ -12,6 +12,7 @@ public class C05_P extends C04_GP{
     }
 
     C05_P(int a){
+        super("Veli");
         System.out.println("P int parametreli constructor calisti");
     }
 }
