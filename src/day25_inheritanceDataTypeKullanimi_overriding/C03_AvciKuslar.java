@@ -59,9 +59,30 @@ public class C03_AvciKuslar extends C02_Kuslar{
         // System.out.println(kartal3.pence); // CTE aramaya kuslardan baslar ve pence bulamaz
 
 
+        C02_Kuslar kus1 = new C02_Kuslar();
+        System.out.println(kus1.omur); // Ha yasar ve olurler
 
+        System.out.println(kus1.solunum); //Ku Akcigerle
+        System.out.println(kus1.cogalma); // Ku yumurtayla cogalir
+        System.out.println(kus1.kanat); // Ku kanatlidir
 
+        System.out.println(kus1.hareket); // Ha hareket ederler
+        System.out.println(kus1.beslenme); // Ha beslenirler
+        System.out.println(kus1.gaga); // Ku gagalidir
+        //System.out.println(kus1.pence); // CTE aramaya kuslardan baslar ve pence bulamaz
 
+        C01_Hayvanlar hayvan1 = new C01_Hayvanlar();
+
+        System.out.println(hayvan1.omur); // Ha yasar ve olurler
+
+        System.out.println(hayvan1.solunum); // Ha nefes alir
+        System.out.println(hayvan1.cogalma); // Ha cogalir
+        // System.out.println(hayvan1.kanat); // CTE aramaya hayvanlar class'indan baslar ve bulamaz
+
+        System.out.println(hayvan1.hareket); // Ha hareket ederler
+        System.out.println(hayvan1.beslenme); // Ha beslenirler
+        //System.out.println(hayvan1.gaga); // CTE aramaya hayvanlar class'indan baslar ve bulamaz
+        //System.out.println(hayvan1.pence); // CTE aramaya kuslardan baslar ve pence bulamaz
 
 
 
