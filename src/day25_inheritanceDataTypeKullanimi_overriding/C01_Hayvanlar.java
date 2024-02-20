@@ -1,9 +1,9 @@
 package day25_inheritanceDataTypeKullanimi_overriding;
 
 public class C01_Hayvanlar {
-    String hareket =  "hareket ederler";
-    String solunum = "nefes alirlar";
-    String beslenme =  "beslenirler";
-    String cogalma = "cogalirlar";
-    String omur =  "yasar ve olurler";
+    public String hareket =  "hareket ederler";
+    public String solunum = "nefes alirlar";
+    public String beslenme =  "beslenirler";
+    public String cogalma = "cogalirlar";
+    public String omur =  "yasar ve olurler";
 }

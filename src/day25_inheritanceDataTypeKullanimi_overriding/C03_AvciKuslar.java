@@ -1,10 +1,10 @@
 package day25_inheritanceDataTypeKullanimi_overriding;
 
 public class C03_AvciKuslar extends C02_Kuslar{
-    String hareket = "ucarlar";
-    String beslenme = "et yerler";
-    String pence = "pencelidir";
-    String gaga = "sivri gagali";
+    public String hareket = "ucarlar";
+    public String beslenme = "et yerler";
+    public String pence = "pencelidir";
+    public String gaga = "sivri gagali";
 
     /*
         Java'da ozellikler variable olarak olusturulursa
