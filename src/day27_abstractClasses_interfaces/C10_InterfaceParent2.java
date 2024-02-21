@@ -7,7 +7,7 @@ public interface C10_InterfaceParent2 {
 
     void method2();
 
-    void method3();
+    int method3();
 
 
 
