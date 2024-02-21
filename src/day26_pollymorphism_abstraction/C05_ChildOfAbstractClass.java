@@ -13,6 +13,8 @@ public class C05_ChildOfAbstractClass extends C04_KuralciAbstractParent{
 
     }
 
+    // public abstract void  method2(); // Abstract method in non-abstract class
+
     public static void main(String[] args) {
 
         // C04_KuralciAbstractParent abj = new C04_KuralciAbstractParent();
@@ -26,6 +28,8 @@ public class C05_ChildOfAbstractClass extends C04_KuralciAbstractParent{
 
         C04_KuralciAbstractParent abj = new C05_ChildOfAbstractClass();
         List<String> isimler = new ArrayList<>();
+
+
     }
 
 
