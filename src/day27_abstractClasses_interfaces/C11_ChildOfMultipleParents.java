@@ -18,6 +18,8 @@ public class C11_ChildOfMultipleParents
         return 5;
     }
 
+
+
     public static void main(String[] args) {
 
         C11_ChildOfMultipleParents obj = new C11_ChildOfMultipleParents();
@@ -32,6 +34,7 @@ public class C11_ChildOfMultipleParents
 
         System.out.println(isim); // Ali
         System.out.println(yas); // 40
+
 
     }
 }
