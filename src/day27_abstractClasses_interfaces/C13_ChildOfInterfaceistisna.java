@@ -1,5 +1,8 @@
 package day27_abstractClasses_interfaces;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class C13_ChildOfInterfaceistisna implements C12_InterfaceIstisna{
 
 
@@ -44,6 +47,7 @@ public class C13_ChildOfInterfaceistisna implements C12_InterfaceIstisna{
         C13_ChildOfInterfaceistisna obj = new C13_ChildOfInterfaceistisna();
         obj.method4();
         // Interface icindeki default keyword'une sahip istisnai method
+
 
     }
 }

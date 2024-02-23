@@ -23,4 +23,6 @@ public abstract class C04_AbstractParent extends C01_AbstractGP{
         System.out.println("Abstract parent method7");
     }
 
+
+
 }
