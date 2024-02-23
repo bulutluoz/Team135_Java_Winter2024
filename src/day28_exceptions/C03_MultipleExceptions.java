@@ -19,7 +19,6 @@ public class C03_MultipleExceptions {
         System.out.println("Index olarak pozitif bir tamsayi giriniz...");
         int index = scanner.nextInt();
 
-
         // birden fazla exception olusma ihtimali varsa
         // oncelikle olasi exception'larin birbiri ile ilintili olup olmadigina
         // (parent - child exceptions) bakmaliyiz
@@ -48,7 +47,6 @@ public class C03_MultipleExceptions {
             System.out.println( "Verilen index Array'in sinirlari disinda");
         }
          */
-
 
         // 2- bir try, birden fazla catch kullanabiliriz
         //    ancak burada ilk exception ile karsilastiginda calismayi durduracagi icin
