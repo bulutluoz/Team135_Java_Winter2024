@@ -46,6 +46,7 @@ public class C05_CheckedExceptions {
         String dosyaYolu = "src/day28_exceptions/deneme.txt";
 
         FileInputStream fileInputStream = new FileInputStream(dosyaYolu);
+        // Unhandled exception: java.io.FileNotFoundException
 
     }
 }

@@ -7,7 +7,7 @@ public class C01_Exceptions {
 
     public static void main(String[] args) {
 
-        // Kullanicidan toplanmak uzere sayilar isteyin
+        // Kullanicidan toplanmak uzere tamsayilar isteyin
         // kullanici sayi girisini durdurmak icin Q'ya basmalidir
         // kullanici Q'ya bastiginda, toplam kac sayi girdigini
         // ve girilen sayilarin toplamini yazdirin
@@ -21,7 +21,7 @@ public class C01_Exceptions {
 
         while(!girilenHarf.equalsIgnoreCase("Q")){
 
-            System.out.println("Toplanmak uzere tam sayi giriniz \nbitirmek icin Q'ya basin");
+            System.out.println("Toplanmak uzere tamsayi giriniz \nbitirmek icin Q'ya basin");
 
             try {
                 girilenSayi = scanner.nextInt();
