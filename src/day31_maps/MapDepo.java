@@ -24,12 +24,56 @@ public class MapDepo {
         return ogrenciMap;
     }
 
-    public static void NoIleBolumYazdir(Map<Integer,String> ogrenciMap, Integer istenenNo){
+    public static String getBolum(Map<Integer,String> ogrenciMap, Integer istenenNo){
 
         String istenenNoValue = ogrenciMap.get(istenenNo); // Sevgi-Cem-11-M-TM
 
         String[] istenenValueArr = istenenNoValue.split("-"); // [Sevgi, Cem, 11, M, TM]
 
-        System.out.println(istenenValueArr[4]); // TM
+        return istenenValueArr[4];
+    }
+
+    public static String getSinif(Map<Integer,String> ogrenciMap, int istenenNo){
+
+        String istenenOgrValue = ogrenciMap.get(istenenNo) ; // "Ali-Cem-11-K-TM"
+
+        String[] istenenValueArr = istenenOgrValue.split("-"); // [Ali, Cem, 11, K, TM]
+
+        return istenenValueArr[2]; // 11
+    }
+
+    public static String getData(Map<Integer,String> ogrenciMap, int istenenNo, String istenenBilgi){
+        // verilen bir ogrenci map'inde
+        // istenen numaradaki ogrencinin
+        // Isim,Soyisim,Sinif,Sube veya Bolum bilgisini dondursun
+
+        String istenenOgrValue = ogrenciMap.get(istenenNo) ; // "Ali-Cem-11-K-TM"
+
+        String[] istenenValueArr = istenenOgrValue.split("-"); // [Ali, Cem, 11, K, TM]
+
+
+        switch (istenenBilgi.toUpperCase()){
+
+            case "ISIM" :
+                return istenenValueArr[0];
+
+            case "SOYISIM" :
+                return istenenValueArr[1];
+
+            case "SINIF" :
+                return istenenValueArr[2];
+
+            case "SUBE" :
+                return istenenValueArr[3];
+
+            case "BOLUM" :
+                return istenenValueArr[4];
+
+            default:
+                return "Yanlis bilgi istegi";
+        }
+
+
+
     }
 }
