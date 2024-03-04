@@ -153,15 +153,67 @@ public class MapDepo {
 
         }
 
+    }
 
+    public static void sinifListesiYazdir(Map<Integer,String> ogrenciMap, Integer sinif){
 
+        // 1- tum key'leri kaydet
+        Set<Integer> ogrenciNoSet = ogrenciMap.keySet();
 
+        // 2- tum key'lere ait value'lari gozden gecirmek icin for-each loop olustur
+        System.out.println("No Sube Isim Soyisim ");
 
+        for (Integer ogrenciNo : ogrenciNoSet
+             ) {
+
+            // 3- for-each'in getirdigi no'daki ogrenci value'sunu kaydet
+            String ogrenciValue = ogrenciMap.get(ogrenciNo); // Ali-Can-11-H-MF
+
+            // 4- ogrenci value'sundeki bilgilere ulasmak icin array'e cevir
+            String[] ogrenciValueArr = ogrenciValue.split("-"); // [Ali, Can, 11, H, MF]
+
+            // 5- parametre olarak yollanan bilgilere uyan ogrencilerin
+            //    istenen bilgilerini yazdir
+
+            if (ogrenciValueArr[2].equals(sinif+"")){
+
+                System.out.println( ogrenciNo + "  " + ogrenciValueArr[3] + "  " +
+                                    ogrenciValueArr[0] + " " + ogrenciValueArr[1] );
+            }
+        }
 
 
     }
 
+    public static void soyisimIleOgrenciListele(Map<Integer,String> ogrenciMap,String soyisim){
+
+        // 1- tum key'leri kaydet
+        Set<Integer> ogrenciNoSet = ogrenciMap.keySet();
+
+        // 2- tum key'lere ait value'lari gozden gecirmek icin for-each loop olustur
+        System.out.println("No Sube Isim Soyisim ");
+
+        for (Integer ogrenciNo : ogrenciNoSet
+             ) {
+
+            // 3- for-each'in getirdigi no'daki ogrenci value'sunu kaydet
+            String ogrenciValue = ogrenciMap.get(ogrenciNo); // Ali-Can-11-H-MF
+
+            // 4- ogrenci value'sundeki bilgilere ulasmak icin array'e cevir
+            String[] ogrenciValueArr = ogrenciValue.split("-"); // [Ali, Can, 11, H, MF]
+
+            // 5- parametre olarak yollanan bilgilere uyan ogrencilerin
+            //    istenen bilgilerini yazdir
+
+            if (ogrenciValueArr[1].equalsIgnoreCase(soyisim)){
+
+                System.out.println( ogrenciNo + "  " + ogrenciValueArr[3] + "  " +
+                                    ogrenciValueArr[0] + " " + ogrenciValueArr[1]);
+            }
 
 
+        }
+
+    }
 
 }
