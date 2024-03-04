@@ -2,6 +2,7 @@ package day31_maps;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class MapDepo {
 
@@ -76,4 +77,51 @@ public class MapDepo {
 
 
     }
+
+    public static void sinifSubeListesiYazdir(Map<Integer,String> ogrenciMap, Integer sinif , String sube){
+
+        /*
+        {
+           101=Ali-Can-11-H-MF,
+           102=Veli-Cem-10-K-TM,
+           103=Ali-Cem-11-K-TM,
+           104=Ayse-Can-10-H-MF,
+           105=Sevgi-Cem-11-M-TM,
+           106=Sevgi-Can-10-K-MF,
+           107=Esra-Han-11-M-SOZ
+           }
+         */
+
+        // 1- tum ogrencileri gozden gecirebilmek icin
+        //    once tum ogrenci numaralarini elde etmeliyim
+        Set<Integer> ogrenciNoSeti = ogrenciMap.keySet(); // [101, 102, 103, 104, 105, 106, 107]
+
+        // 2- bu Key'leri kullanarak her bir key icin value'lari bize getirecek
+        //    bir for-each loop olusturalim
+
+        for ( Integer eachKey: ogrenciNoSeti
+             ) { // 101
+            // 3- for-each loop'da gelen ogrenci numarasina ait value'yu kaydedelim
+            String eachvalue = ogrenciMap.get(eachKey); // Ali-Can-11-H-MF
+
+            // 4- value'daki bilgilere erisebilmek icin
+            //    value'yu array'e cevirelim
+
+            String[] valueArr = eachvalue.split("-"); // [Ali, Can, 11, H, MF]
+
+            // 5- istenen sartlari kontrol edip,
+            //    istenen sartlari saglayan ogrencilerin
+            //    numara, isim ve soyisimlerini yazdiralim
+
+
+
+
+        }
+    }
+
+
+
+
+
+
 }
