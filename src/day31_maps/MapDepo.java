@@ -248,4 +248,68 @@ public class MapDepo {
         }
         return ogrenciMap;
     }
+
+    public static Map<Integer, String> numaraIleSoyisimDegistir(Map<Integer, String> ogrenciMap, int ogrenciNo, String yeniSoyisim) {
+
+        // verilen ogrenciNo'ya ait value'yu kaydedelim
+
+        String ogrenciValue = ogrenciMap.get(ogrenciNo); // Ali-Can-11-H-MF
+
+        // value'deki bilgilere erismek ve update edebilmek icin array'e cevirelim
+
+        String[] ogrenciValueArr = ogrenciValue.split("-"); // [Ali, Can, 11, H, MF]
+
+        // array'de istenen degisikligi yapalim
+
+        ogrenciValueArr[1] = yeniSoyisim;
+
+        // 6- array'de yaptigimiz degisikligi, map'e kaydedebilmek icin
+        //    array'i yeniden String ogrenci value'sunun formatina getir
+
+        String yeniValue =  String.join("-",ogrenciValueArr);
+
+        // 7- ogrenciNo ve yeniValue'yu ogrenciMap'e ekleyelim
+        ogrenciMap.put(ogrenciNo,yeniValue);
+
+        return ogrenciMap;
+    }
+
+    public static Map<Integer, String> isimSoyisimDuzenle(Map<Integer, String> ogrenciMap) {
+
+        // 1- tum key'leri kaydet
+        Set<Integer> ogrenciNoSet = ogrenciMap.keySet();
+
+        // 2- tum key'lere ait value'lari gozden gecirmek icin for-each loop olustur
+
+        for (Integer ogrenciNo: ogrenciNoSet
+             ) {
+            // 3- for-each'in getirdigi no'daki ogrenci value'sunu kaydet
+            String ogrenciValue = ogrenciMap.get(ogrenciNo); // Ali-Can-11-H-MF
+
+            // 4- ogrenci value'sundeki bilgilere ulasmak icin array'e cevir
+            String[] ogrenciValueArr = ogrenciValue.split("-"); // [Ali, Can, 11, H, MF]
+
+            // 5- parametre olarak gonderilen bilgilerle
+            //    array'de istenen update'i yap
+
+            ogrenciValueArr[0] = ogrenciValueArr[0].substring(0,1).toUpperCase()+
+                                 ogrenciValueArr[0].substring(1).toLowerCase();
+
+            ogrenciValueArr[1] = ogrenciValueArr[1].toUpperCase();
+            // 6- array'de yaptigimiz degisikligi, map'e kaydedebilmek icin
+            //    array'i yeniden String ogrenci value'sunun formatina getir
+
+            String yeniValue =  String.join("-",ogrenciValueArr);
+
+            // 7- ogrenciNo ve yeniValue'yu ogrenciMap'e ekleyelim
+            ogrenciMap.put(ogrenciNo,yeniValue);
+
+        }
+        return ogrenciMap;
+    }
+
+    public static Map<Integer, String> yilSonuSinifArtirma(Map<Integer, String> ogrenciMap) {
+
+
+    }
 }
