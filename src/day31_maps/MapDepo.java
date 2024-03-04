@@ -80,18 +80,6 @@ public class MapDepo {
 
     public static void sinifSubeListesiYazdir(Map<Integer,String> ogrenciMap, Integer sinif , String sube){
 
-        /*
-        {
-           101=Ali-Can-11-H-MF,
-           102=Veli-Cem-10-K-TM,
-           103=Ali-Cem-11-K-TM,
-           104=Ayse-Can-10-H-MF,
-           105=Sevgi-Cem-11-M-TM,
-           106=Sevgi-Can-10-K-MF,
-           107=Esra-Han-11-M-SOZ
-           }
-         */
-
         // 1- tum ogrencileri gozden gecirebilmek icin
         //    once tum ogrenci numaralarini elde etmeliyim
         Set<Integer> ogrenciNoSeti = ogrenciMap.keySet(); // [101, 102, 103, 104, 105, 106, 107]
@@ -131,7 +119,47 @@ public class MapDepo {
         }
     }
 
+    public static void isimSoyisimIleOgrenciBilgiYazdir(Map<Integer,String> ogrenciMap,String isim, String soyisim){
 
+        // 1- tum key'leri kaydet
+          Set<Integer> ogrenciNoSet = ogrenciMap.keySet();
+
+        // 2- tum key'lere ait value'lari gozden gecirmek icin for-each loop olustur
+        System.out.println("No Sinif  Sube Bolum");
+
+        for ( Integer ogrenciNo : ogrenciNoSet
+             ) { // 101
+
+            // 3- for-each'in getirdigi no'daki ogrenci value'sunu kaydet
+            String ogrenciValue = ogrenciMap.get(ogrenciNo); // Ali-Can-11-H-MF
+
+            // 4- ogrenci value'sundeki bilgilere ulasmak icin array'e cevir
+            String[] ogrenciValueArr = ogrenciValue.split("-"); // [Ali, Can, 11, H, MF]
+
+            // 5- parametre olarak yollanan bilgilere uyan ogrencilerin
+            //    istenen bilgilerini yazdir
+            if (ogrenciValueArr[0].equalsIgnoreCase(isim) &&
+                ogrenciValueArr[1].equalsIgnoreCase(soyisim)){
+
+                System.out.println(
+                        ogrenciNo + "  "+
+                        ogrenciValueArr[2] + "    "+
+                        ogrenciValueArr[3] + "    "+
+                        ogrenciValueArr[4]
+                );
+
+            }
+
+
+        }
+
+
+
+
+
+
+
+    }
 
 
 
