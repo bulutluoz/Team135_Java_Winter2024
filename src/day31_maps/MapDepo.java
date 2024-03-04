@@ -99,6 +99,9 @@ public class MapDepo {
         // 2- bu Key'leri kullanarak her bir key icin value'lari bize getirecek
         //    bir for-each loop olusturalim
 
+        System.out.println("No Isim  Soyisim");
+        System.out.println("================");
+
         for ( Integer eachKey: ogrenciNoSeti
              ) { // 101
             // 3- for-each loop'da gelen ogrenci numarasina ait value'yu kaydedelim
@@ -113,7 +116,16 @@ public class MapDepo {
             //    istenen sartlari saglayan ogrencilerin
             //    numara, isim ve soyisimlerini yazdiralim
 
+            if ( valueArr[2].equals(sinif+"") && valueArr[3].equalsIgnoreCase(sube)){
 
+                System.out.println(
+                        eachKey+ " " +       // ogrenci no
+                        valueArr[0] + " " +  // ogrenci isim
+                        valueArr[1]          // ogrenci soyisim
+
+                );
+
+            }
 
 
         }

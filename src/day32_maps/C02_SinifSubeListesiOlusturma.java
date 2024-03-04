@@ -12,8 +12,6 @@ public class C02_SinifSubeListesiOlusturma {
         // numara, isim ve soyisimlerini yazdirin
 
         Map<Integer,String> ogrenciMap = MapDepo.mapOlustur();
-
-        System.out.println(ogrenciMap);
         /*
         {
            101=Ali-Can-11-H-MF,
@@ -29,5 +27,7 @@ public class C02_SinifSubeListesiOlusturma {
         // 11.sinif M subesinin listesini yazdirin
 
         MapDepo.sinifSubeListesiYazdir(ogrenciMap,11,"M");
+
+        MapDepo.sinifSubeListesiYazdir(ogrenciMap,10,"K");
     }
 }
