@@ -310,6 +310,48 @@ public class MapDepo {
 
     public static Map<Integer, String> yilSonuSinifArtirma(Map<Integer, String> ogrenciMap) {
 
+        // 1- tum key'leri kaydet
+        Set<Integer> ogrenciNoSet = ogrenciMap.keySet();
 
+        // 2- tum key'lere ait value'lari gozden gecirmek icin for-each loop olustur
+
+        for (Integer ogrenciNo: ogrenciNoSet
+        ) {
+            // 3- for-each'in getirdigi no'daki ogrenci value'sunu kaydet
+            String ogrenciValue = ogrenciMap.get(ogrenciNo); // Ali-Can-11-H-MF
+
+            // 4- ogrenci value'sundeki bilgilere ulasmak icin array'e cevir
+            String[] ogrenciValueArr = ogrenciValue.split("-"); // [Ali, Can, 11, H, MF]
+
+            // 5- parametre olarak gonderilen bilgilerle
+            //    array'de istenen update'i yap
+
+            switch (ogrenciValueArr[2]){ // sinif bilgisine gore
+
+                case "9" :
+                    ogrenciValueArr[2]="10";
+                    break;
+                case "10" :
+                    ogrenciValueArr[2]="11";
+                    break;
+                case "11" :
+                    ogrenciValueArr[2]="12";
+                    break;
+                case "12" :
+                    ogrenciValueArr[2]="Mezun";
+
+            }
+
+            // 6- array'de yaptigimiz degisikligi, map'e kaydedebilmek icin
+            //    array'i yeniden String ogrenci value'sunun formatina getir
+
+            String yeniValue =  String.join("-",ogrenciValueArr);
+
+            // 7- ogrenciNo ve yeniValue'yu ogrenciMap'e ekleyelim
+            ogrenciMap.put(ogrenciNo,yeniValue);
+
+        }
+
+        return ogrenciMap;
     }
 }
