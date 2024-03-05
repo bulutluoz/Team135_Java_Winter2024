@@ -354,4 +354,28 @@ public class MapDepo {
 
         return ogrenciMap;
     }
+
+    public static Map<Integer, String> topluBolumDegistir(Map<Integer, String> ogrenciMap, String eskiBolum, String yeniBolum) {
+
+        // 1- tum entry'leri almak icin entrySet olusturalim
+        Set<Map.Entry<Integer,String>> ogrenciEntrySeti = ogrenciMap.entrySet();
+
+        // 2- tum entry'leri elden gecirmek icin for-each loop olusturalim
+        for (Map.Entry<Integer,String>  eachEntry : ogrenciEntrySeti
+             ) {
+            // 3- value'deki bilgilere erisebilmek icin value'yu array olarak kaydedelim
+            String[] valueArr = eachEntry.getValue().split("-");  // [Ali, Can, 11, H, MF]
+
+            // 4- array'de istenen update'i yap
+            if (valueArr[4].equalsIgnoreCase(eskiBolum)){ // [Ali, Can, 11, H, SAY]
+                valueArr[4]=yeniBolum;
+            }
+
+            // 5- update edilen array'i entry'nin value'su olarak set edelim
+
+            eachEntry.setValue( String.join("-",valueArr)  );
+        }
+
+        return ogrenciMap;
+    }
 }
