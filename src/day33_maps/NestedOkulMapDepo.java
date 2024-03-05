@@ -40,4 +40,18 @@ public class NestedOkulMapDepo {
 
         return ogrenciValueMap;
     }
+
+    public static Map<Integer, Map<String, String>> ogrenciEkle(Map<Integer, Map<String, String>> nesOgrMap, int okulNo, String isim, String soyisim, String sinif, String sube, String bolum) {
+
+        Map<String,String> ogrenciValueMap = new HashMap<>();
+        ogrenciValueMap.put("isim",isim);
+        ogrenciValueMap.put("soyisim",soyisim);
+        ogrenciValueMap.put("sinif",sinif);
+        ogrenciValueMap.put("sube",sube);
+        ogrenciValueMap.put("bolum",bolum);
+
+        nesOgrMap.put(okulNo,ogrenciValueMap);
+
+        return nesOgrMap;
+    }
 }

@@ -20,5 +20,18 @@ public class C08_NestedOgrenciMapKullanimi {
         // 103 numarali ogrencinin soyismini yazdirin
 
         System.out.println(nesOgrMap.get(103).get("soyisim")); // Can
+
+        // 102 numarali ogrencinin subesini M yapin
+
+        nesOgrMap.get(102).put("sube","M");
+
+        // map'e 104 okul numarasi ile "Hasan","Yan","10","M","MF" ekleyin
+
+        nesOgrMap = NestedOkulMapDepo.ogrenciEkle(nesOgrMap,104,"Hasan","Yan","10","M","MF");
+
+        nesOgrMap = NestedOkulMapDepo.ogrenciEkle(nesOgrMap,105,"Rasit","Celik","11","J","MF");
+        System.out.println(nesOgrMap);
+
+
     }
 }
