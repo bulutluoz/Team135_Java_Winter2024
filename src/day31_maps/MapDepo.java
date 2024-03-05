@@ -3,6 +3,7 @@ package day31_maps;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+import java.util.SplittableRandom;
 
 public class MapDepo {
 
@@ -375,6 +376,41 @@ public class MapDepo {
 
             eachEntry.setValue( String.join("-",valueArr)  );
         }
+
+        return ogrenciMap;
+    }
+
+    public static Map<Integer, String> setData(Map<Integer, String> ogrenciMap, int ogrenciNo, String degisecekBilgi, String yeniDeger) {
+
+        // 1- ogrenci numarasi verilen ogrencinin value'sunu String olarak kaydedelim
+        String ogrenciValue = ogrenciMap.get(ogrenciNo);
+
+        // 2- ogrenci value'sundaki bilgilere ulasabilmek icin array'e split edelim
+        String[] ogrenciValueArr = ogrenciValue.split("-"); // [Ali, Can, 11, H, SAY]
+
+        switch (degisecekBilgi.toLowerCase()){
+
+            case "isim" :
+                ogrenciValueArr[0] = yeniDeger;
+                break;
+            case "soyisim" :
+                ogrenciValueArr[1] = yeniDeger;
+                break;
+            case "sinif" :
+                ogrenciValueArr[2] = yeniDeger;
+                break;
+            case "sube" :
+                ogrenciValueArr[3] = yeniDeger;
+                break;
+            case "bolum" :
+                ogrenciValueArr[4] = yeniDeger;
+        }
+
+        // 3- array'de degisiklik yaptik, array'in yeni halini yeni value olarak kaydedelim
+        String yeniValue = String.join("-",ogrenciValueArr);
+
+        // 4- Ogrenci no ve yeni value ile map'i update edelim
+        ogrenciMap.put(ogrenciNo,yeniValue);
 
         return ogrenciMap;
     }
