@@ -45,5 +45,24 @@ public class C02_SinifOgrenciSayilari {
         // eger sinif sinifSayilariMap'de yoksa value'su 1 olarak ekleyelim
         // sinif, sinifSayilariMap'de varsa eski degeri alip, 1 fazlasi ile ekleyelim
 
+        for (Map<String,String> eachValueMap : ogrenciBilgiMapleriCollection
+             ) {
+
+            String sinif = eachValueMap.get("sinif");
+
+            if (!sinifSayilariMap.containsKey(sinif)){ // yoksa
+
+                sinifSayilariMap.put(sinif,1);
+
+            }else{ // varsa
+
+                int eskiSayi = sinifSayilariMap.get(sinif);
+                sinifSayilariMap.put(sinif,eskiSayi+1);
+
+            }
+        }
+
+        System.out.println(sinifSayilariMap); // {10=1, 11=2}
+
     }
 }
