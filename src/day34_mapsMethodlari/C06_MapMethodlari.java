@@ -1,5 +1,6 @@
 package day34_mapsMethodlari;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
