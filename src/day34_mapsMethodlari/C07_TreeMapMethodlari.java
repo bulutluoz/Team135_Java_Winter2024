@@ -42,6 +42,9 @@ public class C07_TreeMapMethodlari {
         // Java'nin genel kurali olan
         // baslangic index'i inclusive(dahil), bitis index'i exclusive(haric) kuralina dikkat edilmelidir
 
+
+        // headMap() bastan, verilen key'e kadar olan map'i
+        // tailMap() verilen elemandan sona kadar olan map'i verir
         System.out.println(kullanimSayilariMap.tailMap("L")); // {L=21, M=10, T=25}
         System.out.println(kullanimSayilariMap.tailMap("M",false)); // {T=25}
 
@@ -52,10 +55,55 @@ public class C07_TreeMapMethodlari {
         // tailMap ve headMap'de olmayan bir key girilirse
         // o key olsaydi nerede olurdu bakip ona gore elemanlari dondurur
 
-        //  {A=15, H=40, L=21, M=10, T=25}
+
         System.out.println(kullanimSayilariMap.tailMap("D")); // H=40, L=21, M=10, T=25
         System.out.println(kullanimSayilariMap.headMap("R")); // A=15, H=40, L=21, M=10
 
+
+        // higher > , ceiling >=
+        System.out.println(kullanimSayilariMap.higherKey("H")); // L    >
+        System.out.println(kullanimSayilariMap.ceilingKey("H")); // H    >=
+
+        System.out.println(kullanimSayilariMap.higherKey("D")); // H  >
+        System.out.println(kullanimSayilariMap.ceilingKey("D")); // H >=
+
+        System.out.println(kullanimSayilariMap.higherEntry("M")); // T=25
+        System.out.println(kullanimSayilariMap.ceilingEntry("M")); // M=10
+
+        System.out.println(kullanimSayilariMap.higherEntry("K")); // L = 21
+        System.out.println(kullanimSayilariMap.ceilingEntry("K")); // L = 21
+
+        //  {A=15, H=40, L=21, M=10, T=25}
+
+        // lower < , floor <=
+        System.out.println(kullanimSayilariMap.lowerKey("M")); // L
+        System.out.println(kullanimSayilariMap.floorKey("M")); // M
+
+        System.out.println(kullanimSayilariMap.lowerKey("S")); // M
+        System.out.println(kullanimSayilariMap.floorKey("S")); // M
+
+
+        // subMap verilen elemanlar arasindaki elemanlari verir
+        // isterseniz sinirlarin dahil olup olmayacagini belirleyebiliriz
+        System.out.println(kullanimSayilariMap.subMap("H", "M")); // {H=40, L=21}
+
+        System.out.println(kullanimSayilariMap.subMap("H", true, "M", true));
+        // {H=40, L=21, M=10}
+
+        System.out.println(kullanimSayilariMap.subMap("H", false, "M", false));
+        // {L=21}
+
+        // descendingMap() siralamayi tersine cevirir
+        // TreeMap elemanlari dogal sirali ascending tuttugu icin
+        // descendingMap() ile tersine cevirdigimiz map'i TreeMap olarak kaydedemeyiz
+
+        System.out.println(kullanimSayilariMap.descendingMap()); // {T=25, M=10, L=21, H=40, A=15}
+
+        // kullanimSayilariMap = kullanimSayilariMap.descendingMap();
+
+        System.out.println(kullanimSayilariMap.pollFirstEntry()); // A=15
+
+        System.out.println(kullanimSayilariMap); // {H=40, L=21, M=10, T=25}
 
     }
 }
